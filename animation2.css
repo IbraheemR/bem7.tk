@@ -1,0 +1,149 @@
+#animation {
+  position: relative;
+  margin-top: 30vmin;
+  left: 35%;
+}
+
+.letter {
+  font-weight: bold;
+  color: #1bf;
+  font-size: 10vmin;
+  line-height: 10vmin;
+  text-align: right;
+
+  height: 10vmin;
+
+  position: relative;
+
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.letter#b  { animation-name: letter_b; }
+
+.letter#e  { animation-name: letter_e; }
+
+.letter#m  { animation-name: letter_m; }
+
+.letter#_7 { animation-name: letter_7; }
+
+@keyframes letter_b {
+  0%   {top: 0; left: 6vmin;}
+  5%   {        left: 6vmin;}
+  10%  {        left: 2vmin;}
+
+  80%  {        left: 2vmin;}
+  85%  {        left: 6vmin;}
+  100% {top: 0; left: 6vmin;} 
+}
+
+ @keyframes letter_e {
+  0%   {top: 0;      left:  6vmin;}
+  5%   {top: 10vmin; left:  6vmin;}
+  10%  {             left: -4vmin;}
+
+  80%  {             left: -4vmin;}
+  85%  {             left: -150vmin;}
+  100% {top: 10vmin;  left: -150vmin;}
+}
+
+@keyframes letter_m {
+  0%   {top: 0;      left:  6vmin;}
+  5%   {top: 20vmin; left:  6vmin;}
+  10%  {             left: -12vmin;}
+
+  80%  {             left: -12vmin;}
+  85%  {             left: -150vmin;}
+  100% {top: 20vmin;  left: -150vmin;}
+}
+
+@keyframes letter_7 {
+  0%   {top: 0;      left:  6vmin;}
+  5%   {top: 30vmin; left:  6vmin;}
+  10%  {             left: -19vmin;}
+
+  80%  {             left: -19vmin;}
+  85%  {             left: -150vmin;}
+  100% {top: 30vmin;  left: -150vmin;}
+}
+
+
+
+.letter::after, .letter::before {
+  display: inline-block;
+  position: absolute;
+
+  color: grey;
+  font-size: 7vmin;
+  line-height: 10vmin;
+
+  direction: rtl;
+  overflow: hidden;
+
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+
+
+.letter#b::after  { 
+  content: "EM7";
+
+  animation-name: letter_b_after;
+
+  color: #1bf;
+  font-size: 10vmin;
+  line-height: 10vmin;
+}
+
+.letter#e::before  { 
+  left: 6vmin;
+  content: "numerated";
+  animation-name: letter_before;
+}
+.letter#e::after  { 
+  left: 6vmin;
+  content: "longated";
+  animation-name: letter_after;
+}
+
+.letter#m::before  { 
+  left: 8vmin;
+  content: "anufacture";
+  animation-name: letter_before;
+}
+.letter#m::after  { 
+  left: 8vmin;
+  content: "igation";
+  animation-name: letter_after;
+}
+
+@keyframes letter_b_after {
+  0%   {max-width: 0;}
+
+  15%  {max-width: 0;}
+  25%  {max-width: 35vmin;}
+  
+  100% {max-width: 35vmin;}
+}
+
+@keyframes letter_before {
+  0%   {max-width: 0;}
+
+  15%  {max-width: 0;}
+  25%  {max-width: 35vmin;}
+  
+  40%  {max-width: 35vmin;}
+  45%  {max-width: 0;}
+
+  100% {max-width: 0;}
+}
+
+@keyframes letter_after {
+  0%   {max-width: 0;}
+
+  45%  {max-width: 0;}
+  55%  {max-width: 35vmin}
+
+  100% {max-width: 35vmin}
+}
