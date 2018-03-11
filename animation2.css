@@ -9,7 +9,7 @@
   line-height: 10vmin;
   text-align: center;
 
-  width: 10vmin;
+  width: 7vmin;
 
   direction: rtl;
   overflow: hidden;
@@ -35,8 +35,8 @@
 }
 
  @keyframes letter_e {
-  0%   {top: 0;      left: 10vmin; max-width: 100%;}
-  5%   {top: 10vmin; left: 10vmin;                 }
+  0%   {top: 0;      left: 7vmin; max-width: 100%;}
+  5%   {top: 10vmin; left: 7vmin;                 }
   10%  {             left: 0;                      }
 
   85%  {                           max-width: 100%;}
@@ -45,8 +45,8 @@
 }
 
 @keyframes letter_m {
-  0%   {top: 0;      left: 20vmin; max-width: 100%;}
-  5%   {top: 20vmin; left: 20vmin;                 }
+  0%   {top: 0;      left: 14vmin; max-width: 100%;}
+  5%   {top: 20vmin; left: 14vmin;                 }
   10%  {             left: 0;                      }
 
   85%  {                           max-width: 100%;}
@@ -55,8 +55,8 @@
 }
 
 @keyframes letter_7 {
-  0%   {top: 0;      left: 30vmin; max-width: 100%;}
-  5%   {top: 30vmin; left: 30vmin;                 }
+  0%   {top: 0;      left: 21vmin; max-width: 100%;}
+  5%   {top: 30vmin; left: 21vmin;                 }
   10%  {             left: 0;                      }
 
   85%  {                           max-width: 100%;}
@@ -70,10 +70,10 @@
   display: inline-block;
   position: absolute;
 
-  left: 12vmin;
+  left: 7vmin;
 
   color: grey;
-  font-size: 7vmin;
+  font-size: 8vmin;
   line-height: 10vmin;
 
   direction: rtl;
@@ -90,9 +90,8 @@
   animation-name: text_b;
 
   top: 0;
-  left: 10vmin;
+  left: 7vmin;
 
-  color: #1bf;
   font-size: 10vmin;
   line-height: 10vmin;
   font-weight: bold;
@@ -100,7 +99,7 @@
 .text#b *  { 
   display: inline-block;
 
-  width: 10vmin;
+  width: 7vmin;
   text-align: center;
 }
 
@@ -127,12 +126,15 @@
 }
 
 @keyframes text_b {
-  0%   {max-width: 0;}
+  0%   {max-width: 0;    color: gray;}
 
   15%  {max-width: 0;}
   35%  {max-width: 100%;}
+
+  85%  {                 color: gray;}
+  95%   {                color: #1bf;}
   
-  100% {max-width: 100%;}
+  100% {max-width: 100%; color: #1bf;}
 }
 
 @keyframes text_1 {
