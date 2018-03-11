@@ -11,6 +11,10 @@
 
   width: 10vmin;
 
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
+
   position: absolute;
 
   animation-duration: 8s;
@@ -31,33 +35,33 @@
 }
 
  @keyframes letter_e {
-  0%   {top: 0;      left: 10vmin;}
-  5%   {top: 10vmin; left: 10vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 10vmin; max-width: 100%;}
+  5%   {top: 10vmin; left: 10vmin;                 }
+  10%  {             left: 0;                      }
 
-  85%  {             left: 0;}
-  90%  {             left: -100vmin;}
-  100% {top: 10vmin; left: -100vmin;}
+  85%  {                           max-width: 100%;}
+  90%  {                           max-width: 0;   }
+  100% {top: 10vmin; left: 0;      max-width: 0;   }
 }
 
 @keyframes letter_m {
-  0%   {top: 0;      left: 20vmin;}
-  5%   {top: 20vmin; left: 20vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 20vmin; max-width: 100%;}
+  5%   {top: 20vmin; left: 20vmin;                 }
+  10%  {             left: 0;                      }
 
-  85%  {             left: 0;}
-  90%  {             left: -100vmin;}
-  100% {top: 20vmin; left: -100vmin;}
+  85%  {                           max-width: 100%;}
+  90%  {                           max-width: 0;   }
+  100% {top: 20vmin; left: 0;      max-width: 0;   }
 }
 
 @keyframes letter_7 {
-  0%   {top: 0;      left: 30vmin;}
-  5%   {top: 30vmin; left: 30vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 30vmin; max-width: 100%;}
+  5%   {top: 30vmin; left: 30vmin;                 }
+  10%  {             left: 0;                      }
 
-  85%  {             left: 0;}
-  90%  {             left: -100vmin;}
-  100% {top: 30vmin; left: -100vmin;}
+  85%  {                           max-width: 100%;}
+  90%  {                           max-width: 0;   }
+  100% {top: 30vmin; left: 0;      max-width: 0;   }
 }
 
 
