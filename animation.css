@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Mina');
+
+#animation {
+  margin-top: 30vmin;
+
+  position: relative;
+  left: 35%;
+}
+
+.letter {
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
+  color: #1bf;
+  font-size: 10vmin;
+  line-height: 10vmin;
+  text-align: right;
+
+  width: 10vmin;
+  height: 10vmin;
+
+  position: absolute;
+
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.letter#b  { animation-name: letter_b; }
+
+.letter#e  { animation-name: letter_e; }
+
+.letter#m  { animation-name: letter_m; }
+
+.letter#_7 { animation-name: letter_7; color: grey;}
+
+
+
+.letter::after {
+  display: block;
+  position: absolute;
+
+  color: grey;
+  font-size: 7vmin;
+  line-height: 10vmin;
+
+  height: 10vmin;
+  top: 1vmin;
+  left: 10vmin;
+
+  direction: rtl;
+  overflow: hidden;
+
+  animation-name: letter_after;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.letter#b::after  { 
+  content: "EM7";
+}
+
+.letter#e::after  { 
+  content: "numerated";
+}
+
+.letter#m::after  { 
+  content: "anufacture";
+}
+
+.letter#_7::after  { 
+  content: "";
+}
+
+
+
+@keyframes letter_b {
+  0%   {top: 0; left: 6vmin;}
+  5%   {        left: 6vmin;}
+  10%  {        left: 0;}
+
+  80%  {        left: 0;}
+  85%  {        left: 6vmin;}
+  90%  {        left: 6vmin;}
+  100% {top: 0; left: 6vmin;}
+}
+
+@keyframes letter_e {
+  0%   {top: 0;      left: 12vmin;}
+  5%   {top: 10vmin; left: 12vmin;}
+  10%  {top: 10vmin; left: 0;}
+
+  80%  {top: 10vmin; left: 0;}
+  85%  {top: 10vmin; left: 12vmin;}
+  90%  {top: 0;      left: 12vmin;}
+  100% {top: 0;      left: 12vmin;}
+}
+
+@keyframes letter_m {
+  0%   {top: 0;      left: 21vmin;}
+  5%   {top: 20vmin; left: 21vmin;}
+  10%  {top: 20vmin; left: 0;}
+
+  80%  {top: 20vmin; left: 0;}
+  85%  {top: 20vmin; left: 21vmin;}
+  90%  {top: 0;      left: 21vmin;}
+  100% {top: 0;      left: 21vmin;}
+}
+
+@keyframes letter_7 {
+  0%   {top: 0;      left: 28vmin;}
+  5%   {top: 30vmin; left: 28vmin;}
+  10%  {top: 30vmin; left: -1vmin;}
+
+  80%  {top: 30vmin; left: -1vmin;}
+  85%  {top: 30vmin; left: 28vmin;}
+  90%  {top: 0;      left: 28vmin;}
+  100% {top: 0;      left: 28vmin;}
+}
+
+@keyframes letter_after {
+  0%   {max-width: 0;}
+  15%  {max-width: 0;}
+  25%  {max-width: 35vmin;}
+
+  70%  {max-width: 35vmin;}
+  75%  {max-width: 0;}
+  100% {max-width: 0;}
+}
