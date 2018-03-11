@@ -74,6 +74,7 @@
 
   direction: rtl;
   overflow: hidden;
+  white-space: nowrap;
 
   animation-duration: 8s;
   animation-iteration-count: infinite;
