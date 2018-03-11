@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Mina');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 body {
   margin: 0;
@@ -6,6 +6,6 @@ body {
 
   overflow-x: hidden;
 
-  font-family: 'Mina', sans-serif;
+  font-family: 'Space Mono', monospace;
 
 }
