@@ -1,5 +1,13 @@
 #animation {
-  position: relative;
+  position: absolute;
+  
+  width: 50vmin;
+  height: 40vmin;
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .letter {
@@ -9,11 +17,15 @@
   line-height: 10vmin;
   text-align: center;
 
-  width: 10vmin;
+  width: 7vmin;
+
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
 
   position: absolute;
 
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-iteration-count: infinite;
 }
 
@@ -26,38 +38,46 @@
 .letter#_7 { animation-name: letter_7; color: grey;}
 
 @keyframes letter_b {
-  0%   {top: 0;      left: 0;}
-  100% {top: 0;      left: 0;}
+  0%   {left: 10vmin;}
+
+  15%  {left: 10vmin;}
+  20%  {left: 0;     }
+
+  95%  {left: 0;     }
+  100% {left: 10vmin;}
 }
 
  @keyframes letter_e {
-  0%   {top: 0;      left: 10vmin;}
-  5%   {top: 10vmin; left: 10vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 17vmin;  max-width: 100%;}
 
-  80%  {             left: 0;}
-  85%  {top: 10vmin; left: 10vmin;}
-  100% {top: 0;      left: 10vmin;}
+  10%  {top: 0;      left: 17vmin;                 }
+  15%  {top: 10vmin; left: 17vmin;                 }
+  20%  {             left: 0;                      }
+
+  95%  {                           max-width: 100%;}
+  100% {top: 10vmin; left: 0;      max-width: 0;   }
 }
 
 @keyframes letter_m {
-  0%   {top: 0;      left: 20vmin;}
-  5%   {top: 20vmin; left: 20vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 24vmin; max-width: 100%;}
 
-  80%  {             left: 0;}
-  85%  {top: 20vmin; left: 20vmin;}
-  100% {top: 0;      left: 20vmin;}
+  10%  {top: 0;      left: 24vmin;                 }
+  15%  {top: 20vmin; left: 24vmin;                 }
+  20%  {             left: 0;                      }
+
+  95%  {                           max-width: 100%;}
+  100% {top: 20vmin; left: 0;      max-width: 0;   }
 }
 
 @keyframes letter_7 {
-  0%   {top: 0;      left: 30vmin;}
-  5%   {top: 30vmin; left: 30vmin;}
-  10%  {             left: 0;}
+  0%   {top: 0;      left: 31vmin; max-width: 100%;}
 
-  80%  {             left: 0;}
-  85%  {top: 30vmin; left: 30vmin;}
-  100% {top: 0;      left: 30vmin;}
+  10%  {top: 0;      left: 31vmin;                 }
+  15%  {top: 30vmin; left: 31vmin;                 }
+  20%  {             left: 0;                      }
+
+  95%  {                           max-width: 100%;}
+  100% {top: 30vmin; left: 0;      max-width: 0;   }
 }
 
 
@@ -66,22 +86,41 @@
   display: inline-block;
   position: absolute;
 
-  left: 8vmin;
+  left: 7vmin;
 
   color: grey;
-  font-size: 7vmin;
+  font-size: 8vmin;
   line-height: 10vmin;
 
   direction: rtl;
   overflow: hidden;
+  white-space: nowrap;
 
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-iteration-count: infinite;
 }
 
+
+
 .text#b  { 
   animation-name: text_b;
-  top: 1vmin;
+
+  top: 0;
+  left: 7vmin;
+
+  font-size: 10vmin;
+  line-height: 10vmin;
+  font-weight: bold;
+}
+.text#b *  { 
+  display: inline-block;
+
+  width: 7vmin;
+  text-align: center;
+}
+
+.text#b #_7 {
+  color: grey
 }
 
 .text#e1  { 
@@ -103,25 +142,23 @@
 }
 
 @keyframes text_b {
-  0%   {max-width: 0;}
+  0%   {left:6vmin;  max-width: 0;     color: gray;}
 
-  15%  {max-width: 0;}
-  35%  {max-width: 100%;}
-  
-  75%  {max-width: 100%;}
-  80%  {max-width: 0;}
+  25%  {             max-width: 0;                   }
+  40%  {             max-width: 100%;                }
 
-  100% {max-width: 0;}
+  95%  {left:7vmin;                    color: gray;}
+  100% {left:17vmin; max-width: 100%;  color: #1bf;}
 }
 
 @keyframes text_1 {
   0%   {max-width: 0;}
 
-  15%  {max-width: 0;}
-  30%  {max-width: 100%;}
+  25%  {max-width: 0;}
+  40%  {max-width: 100%;}
   
-  45%  {max-width: 100%;}
-  50%  {max-width: 0;}
+  55%  {max-width: 100%;}
+  60%  {max-width: 0;}
 
   100% {max-width: 0;}
 }
@@ -129,11 +166,11 @@
 @keyframes text_2 {
   0%   {max-width: 0;}
 
-  50%  {max-width: 0;}
-  65%  {max-width: 100%;}
-  
+  60%  {max-width: 0;}
   75%  {max-width: 100%;}
-  80%  {max-width: 0;}
+  
+  90%  {max-width: 100%;}
+  95%  {max-width: 0;}
 
   100% {max-width: 0;}
 }

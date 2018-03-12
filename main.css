@@ -7,5 +7,19 @@ body {
   overflow-x: hidden;
 
   font-family: 'Share Tech Mono', monospace;
+  color: #444;
+}
 
+h1 {
+  font-size: 5vmin
+}
+
+.tcenter {
+  text-align: center;
+}
+
+
+
+#title {
+  margin: 3vmin;
 }
