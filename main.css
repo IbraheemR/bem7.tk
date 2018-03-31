@@ -1,25 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 50px 0;
 
   overflow-x: hidden;
 
   font-family: 'Share Tech Mono', monospace;
   color: #444;
-}
 
-h1 {
-  font-size: 5vmin
 }
 
 .tcenter {
   text-align: center;
 }
 
-
-
-#title {
-  margin: 3vmin;
+.panel {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 -10px 20px 2px rgba(0, 0, 0, 0.3);
 }
+
+
+#welcome.panel {
+  height: 90vmin;
+}
+#title {
+  margin: 0;
+  padding: 3vmin;
+}
+
+#products.panel {
+  background-color: whitesmoke;
+}
+
+#products.panel #container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.product-card {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+.product-card h1, .product-card h3 {
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+@media only screen and (min-width: 500px) {
+  #products.panel #container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #products.panel #container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
