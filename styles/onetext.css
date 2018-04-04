@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body *{
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
