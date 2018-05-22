@@ -6,6 +6,52 @@
   padding: 3vmin;
 }
 
+#rodsinski.panel {
+  display: -ms-grid;
+  display: grid;
+
+  position: relative;
+
+  grid-template-columns: auto;
+  grid-template-areas: "image" "words";
+
+  background-image: url(http://kart.bem7.tk/images/photo14.png);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#rodsinski.panel::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff8
+}
+
+#rodsinski.panel #words {
+  grid-area: words;
+  z-index: 100;
+}
+
+#rodsinski.panel img {
+  grid-area: image;
+  z-index: 100;
+
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 700px) {
+  #rodsinski.panel {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "words image";
+  }
+}
+
+
 #products.panel {
   background-color: whitesmoke;
 }
@@ -25,6 +71,7 @@
   max-width: 1000px;
   text-align: center;
   display: grid;
+  display: -ms-grid; 
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
