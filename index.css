@@ -15,11 +15,7 @@
   grid-template-columns: auto;
   grid-template-areas: "image" "words";
 
-<<<<<<< HEAD
   background-image: url(https://kart.bem7.tk/images/photo14.png);
-=======
-  background-image: url(http://kart.bem7.tk/images/photo14.jpg);
->>>>>>> 2786d536a4365e360611f61a1a9609760f469f44
   background-position: center; 
   background-repeat: no-repeat;
   background-size: cover;
